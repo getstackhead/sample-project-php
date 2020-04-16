@@ -1,0 +1,13 @@
+---
+domain: mydomain.com
+deployment:
+  type: docker
+  settings:
+    services:
+      app:
+        image: saitho/mackerel-php-project-demo
+        expose_port: 80
+      db:
+        image: mariadb:10.5
+        environment:
+          MYSQL_ROOT_PASSWORD: example
