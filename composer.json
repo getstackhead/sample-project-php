@@ -4,14 +4,16 @@
 		{"name": "Mario Lubenka", "email": "me@saitho.me", "role": "Lead Developer"}
 	],
 	"repositories": [
+		{ "type": "vcs", "url": "git@github.com:mackerelserver/project-validator.git" },
 		{ "type": "vcs", "url": "git@github.com:mackerelserver/deployment.git" }
 	],
 	"require": {
-		"mackerel/deployment": "dev-master"
+		"mackerelserver/deployment": "dev-master",
+		"mackerelserver/project-validator": "dev-master"
 	},
 	"scripts":{
 		"mackerel-submodules": [
-			"cd vendor/mackerel/deployment && git submodule sync && git submodule update --init"
+			"cd vendor/mackerelserver/deployment && git submodule sync && git submodule update --init"
 		],
 		"post-install-cmd": [
 			"@mackerel-submodules"

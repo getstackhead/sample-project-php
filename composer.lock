@@ -1,0 +1,86 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "bced1362edb4cc765ac43bdb8d821acd",
+    "packages": [
+        {
+            "name": "mackerelserver/deployment",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mackerelserver/deployment.git",
+                "reference": "c888dfd581099f9c40a4a777ea8aa9dfeb6af147"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mackerelserver/deployment/zipball/c888dfd581099f9c40a4a777ea8aa9dfeb6af147",
+                "reference": "c888dfd581099f9c40a4a777ea8aa9dfeb6af147",
+                "shasum": ""
+            },
+            "type": "library",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mario Lubenka",
+                    "email": "mario.lubenka@googlemail.com"
+                }
+            ],
+            "description": "Setup your application on a domain automatically",
+            "support": {
+                "source": "https://github.com/mackerelserver/deployment/tree/master",
+                "issues": "https://github.com/mackerelserver/deployment/issues"
+            },
+            "time": "2020-04-17T17:30:29+00:00"
+        },
+        {
+            "name": "mackerelserver/project-validator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mackerelserver/project-validator.git",
+                "reference": "9687f615e030bec555d91ed34d83c8b27df3dcd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mackerelserver/project-validator/zipball/9687f615e030bec555d91ed34d83c8b27df3dcd1",
+                "reference": "9687f615e030bec555d91ed34d83c8b27df3dcd1",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/project-validator"
+            ],
+            "type": "library",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mario Lubenka",
+                    "email": "mario.lubenka@googlemail.com"
+                }
+            ],
+            "description": "Validate your project definition files",
+            "support": {
+                "source": "https://github.com/mackerelserver/project-validator/tree/master",
+                "issues": "https://github.com/mackerelserver/project-validator/issues"
+            },
+            "time": "2020-04-17T13:14:53+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "mackerelserver/deployment": 20,
+        "mackerelserver/project-validator": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
