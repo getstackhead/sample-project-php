@@ -5,8 +5,10 @@ deployment:
   settings:
     services:
       app:
-        image: saitho/mackerel-php-project-demo
-        expose_port: 80
+        image: mackerelserver/mackerel-php-project-demo
+        expose_port: 8080
+        links:
+          - db
       db:
         image: mariadb:10.5
         environment:

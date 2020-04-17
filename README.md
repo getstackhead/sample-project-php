@@ -24,14 +24,18 @@ This is a sample repository for deploying a PHP application and serving it on a 
 
 4. Replace `mydomain.com` with your own domain in `mackerel/example_docker.yaml`
 
-### Application deployment
+### Server provisioning
 
 ```shell script
 ansible-playbook vendor/mackerel/deployment/server-provision.yml
 ```
 
-### Server provisioning
+After provisioning completed, you should see the Nginx default page when opening your domain in your browser.
+
+### Application deployment
 
 ```shell script
 ansible-playbook vendor/mackerel/deployment/application-deploy.yml
 ```
+
+After deployment you should see a page that prints "Hello world!" alongside the PHP version and successful database connection.
