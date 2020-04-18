@@ -5,7 +5,7 @@ deployment:
   settings:
     services:
       app:
-        image: mackerelserver/mackerel-php-project-demo
+        image: getstackhead/project-demo-php
         expose_port: 8080
         links:
           - db

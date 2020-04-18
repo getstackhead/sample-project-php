@@ -1,13 +1,13 @@
 all:
   vars:
     # this sets config folder path to "project" folder in project root
-    mackerel__config_folder: "{{ inventory_dir }}/../project"
+    stackhead__config_folder: "{{ inventory_dir }}/project"
     ansible_user: root
     ansible_connection: ssh
   hosts:
     myhost:
       ansible_host: 1.2.3.4 # add your own IP here!
-      mackerel:
+      stackhead:
         applications:
           - example_docker
           #- example_native

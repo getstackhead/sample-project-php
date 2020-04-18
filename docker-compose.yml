@@ -1,7 +1,7 @@
 version: "3"
 services:
   app:
-    container_name: "mackerel-test"
+    container_name: "stackhead-test"
     build:
       context: .
     ports:
