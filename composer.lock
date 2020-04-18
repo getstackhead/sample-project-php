@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "069673aa99d9d3e7b65d543aa1ae9de7",
+    "content-hash": "b9bb0d812a2226c802bb9d45c6dd33fa",
     "packages": [
         {
             "name": "getstackhead/deployment",
-            "version": "dev-feature/split_expose-port_setting",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getstackhead/deployment.git",
-                "reference": "22a21211e1bcc0fa91916d2b8b12c9a9e3f3b51b"
+                "reference": "6f355619f63f82fba094fe5765a918fa00649d5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getstackhead/deployment/zipball/22a21211e1bcc0fa91916d2b8b12c9a9e3f3b51b",
-                "reference": "22a21211e1bcc0fa91916d2b8b12c9a9e3f3b51b",
+                "url": "https://api.github.com/repos/getstackhead/deployment/zipball/6f355619f63f82fba094fe5765a918fa00649d5f",
+                "reference": "6f355619f63f82fba094fe5765a918fa00649d5f",
                 "shasum": ""
             },
             "type": "library",
@@ -35,7 +35,7 @@
                 "source": "https://github.com/getstackhead/deployment/tree/feature/split_expose-port_setting",
                 "issues": "https://github.com/getstackhead/deployment/issues"
             },
-            "time": "2020-04-18T13:36:19+00:00"
+            "time": "2020-04-18T13:58:07+00:00"
         },
         {
             "name": "getstackhead/project-validator",

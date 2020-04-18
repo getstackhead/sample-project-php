@@ -8,7 +8,7 @@
 		{ "type": "vcs", "url": "git@github.com:getstackhead/deployment.git" }
 	],
 	"require": {
-		"getstackhead/deployment": "dev-feature/split_expose-port_setting",
+		"getstackhead/deployment": "dev-master",
 		"getstackhead/project-validator": "^1.0"
 	},
 	"scripts":{
