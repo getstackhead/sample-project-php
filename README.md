@@ -7,7 +7,7 @@ This is a sample repository for deploying a PHP application and serving it on a 
 ### Requirements
 
 * Ansible
-* web server with root SSH access (we recommend renting a pay-per-use VPS at Hetzner)
+* web server with root SSH access (we recommend renting a [pay-per-use VPS at Hetzner](https://www.hetzner.com/cloud))
 * top level domain with A record pointing to your server IP
 
 ### Preparation
@@ -23,6 +23,11 @@ This is a sample repository for deploying a PHP application and serving it on a 
 3. Change the IP address `1.2.3.4` to your own servers IP in `.stackhead/inventory.yml`
 
 4. Replace `mydomain.com` with your own domain in `.stackhead/project/example_docker.yaml`
+
+5. Validate your project file using the `getstackhead/project-validator` binary: 
+   ```shell script
+   ./vendor/bin/project-validator .stackhead/project/example_docker.yml 
+   ```
 
 ### Server provisioning
 

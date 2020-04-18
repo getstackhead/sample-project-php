@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bced1362edb4cc765ac43bdb8d821acd",
+    "content-hash": "069673aa99d9d3e7b65d543aa1ae9de7",
     "packages": [
         {
             "name": "getstackhead/deployment",
-            "version": "dev-master",
+            "version": "dev-feature/split_expose-port_setting",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getstackhead/deployment.git",
-                "reference": "c888dfd581099f9c40a4a777ea8aa9dfeb6af147"
+                "reference": "22a21211e1bcc0fa91916d2b8b12c9a9e3f3b51b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getstackhead/deployment/zipball/c888dfd581099f9c40a4a777ea8aa9dfeb6af147",
-                "reference": "c888dfd581099f9c40a4a777ea8aa9dfeb6af147",
+                "url": "https://api.github.com/repos/getstackhead/deployment/zipball/22a21211e1bcc0fa91916d2b8b12c9a9e3f3b51b",
+                "reference": "22a21211e1bcc0fa91916d2b8b12c9a9e3f3b51b",
                 "shasum": ""
             },
             "type": "library",
@@ -32,23 +32,23 @@
             ],
             "description": "Setup your application on a domain automatically",
             "support": {
-                "source": "https://github.com/getstackhead/deployment/tree/master",
+                "source": "https://github.com/getstackhead/deployment/tree/feature/split_expose-port_setting",
                 "issues": "https://github.com/getstackhead/deployment/issues"
             },
-            "time": "2020-04-17T17:30:29+00:00"
+            "time": "2020-04-18T13:36:19+00:00"
         },
         {
             "name": "getstackhead/project-validator",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getstackhead/project-validator.git",
-                "reference": "9687f615e030bec555d91ed34d83c8b27df3dcd1"
+                "reference": "fd0ad302f67dc07b643d884ddcd3e70793a39ae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getstackhead/project-validator/zipball/9687f615e030bec555d91ed34d83c8b27df3dcd1",
-                "reference": "9687f615e030bec555d91ed34d83c8b27df3dcd1",
+                "url": "https://api.github.com/repos/getstackhead/project-validator/zipball/fd0ad302f67dc07b643d884ddcd3e70793a39ae9",
+                "reference": "fd0ad302f67dc07b643d884ddcd3e70793a39ae9",
                 "shasum": ""
             },
             "bin": [
@@ -64,20 +64,19 @@
                     "email": "mario.lubenka@googlemail.com"
                 }
             ],
-            "description": "Validate your project definition files",
+            "description": "Validate your StackHead project definition files",
             "support": {
-                "source": "https://github.com/getstackhead/project-validator/tree/master",
+                "source": "https://github.com/getstackhead/project-validator/tree/v1.0.0",
                 "issues": "https://github.com/getstackhead/project-validator/issues"
             },
-            "time": "2020-04-17T13:14:53+00:00"
+            "time": "2020-04-18T13:11:21+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "getstackhead/deployment": 20,
-        "getstackhead/project-validator": 20
+        "getstackhead/deployment": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

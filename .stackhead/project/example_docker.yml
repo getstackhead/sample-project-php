@@ -3,10 +3,12 @@ domain: mydomain.com
 deployment:
   type: docker
   settings:
+    expose:
+      service: app
+      port: 8080
     services:
       app:
         image: getstackhead/project-demo-php
-        expose_port: 8080
         links:
           - db
       db:
