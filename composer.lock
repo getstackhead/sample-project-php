@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9bb0d812a2226c802bb9d45c6dd33fa",
+    "content-hash": "8a8d481afe831470938fe66ea6b4f222",
     "packages": [
         {
             "name": "getstackhead/deployment",
-            "version": "dev-master",
+            "version": "dev-feature/system_user",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getstackhead/deployment.git",
-                "reference": "6f355619f63f82fba094fe5765a918fa00649d5f"
+                "reference": "060e02ca64ed4305991df4784074014e7977cf74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getstackhead/deployment/zipball/6f355619f63f82fba094fe5765a918fa00649d5f",
-                "reference": "6f355619f63f82fba094fe5765a918fa00649d5f",
+                "url": "https://api.github.com/repos/getstackhead/deployment/zipball/060e02ca64ed4305991df4784074014e7977cf74",
+                "reference": "060e02ca64ed4305991df4784074014e7977cf74",
                 "shasum": ""
             },
             "type": "library",
@@ -32,23 +32,23 @@
             ],
             "description": "Setup your application on a domain automatically",
             "support": {
-                "source": "https://github.com/getstackhead/deployment/tree/feature/split_expose-port_setting",
+                "source": "https://github.com/getstackhead/deployment/tree/feature/system_user",
                 "issues": "https://github.com/getstackhead/deployment/issues"
             },
-            "time": "2020-04-18T13:58:07+00:00"
+            "time": "2020-04-24T12:39:49+00:00"
         },
         {
             "name": "getstackhead/project-validator",
-            "version": "v1.0.0",
+            "version": "dev-feature/system_user",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getstackhead/project-validator.git",
-                "reference": "fd0ad302f67dc07b643d884ddcd3e70793a39ae9"
+                "reference": "6b2cdfc594ede69a29f87b56d7d1be01729a08b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getstackhead/project-validator/zipball/fd0ad302f67dc07b643d884ddcd3e70793a39ae9",
-                "reference": "fd0ad302f67dc07b643d884ddcd3e70793a39ae9",
+                "url": "https://api.github.com/repos/getstackhead/project-validator/zipball/6b2cdfc594ede69a29f87b56d7d1be01729a08b3",
+                "reference": "6b2cdfc594ede69a29f87b56d7d1be01729a08b3",
                 "shasum": ""
             },
             "bin": [
@@ -66,20 +66,22 @@
             ],
             "description": "Validate your StackHead project definition files",
             "support": {
-                "source": "https://github.com/getstackhead/project-validator/tree/v1.0.0",
+                "source": "https://github.com/getstackhead/project-validator/tree/feature/system_user",
                 "issues": "https://github.com/getstackhead/project-validator/issues"
             },
-            "time": "2020-04-18T13:11:21+00:00"
+            "time": "2020-04-24T13:08:37+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "getstackhead/deployment": 20
+        "getstackhead/deployment": 20,
+        "getstackhead/project-validator": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

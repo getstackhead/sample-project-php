@@ -3,7 +3,8 @@ services:
   app:
     container_name: "stackhead-test"
     build:
-      context: .
+      context: Dockerfiles
+      dockerfile: single-container.Dockerfile
     ports:
     - 32773:8080
     links:

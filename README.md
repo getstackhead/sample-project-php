@@ -44,3 +44,19 @@ ansible-playbook vendor/getstackhead/deployment/application-deploy.yml
 ```
 
 After deployment you should see a page that prints "Hello world!" alongside the PHP version and successful database connection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+docker build -t getstackhead/project-demo-php:single-latest -f Dockerfiles/single-container.Dockerfile .
+

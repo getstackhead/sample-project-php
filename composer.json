@@ -8,8 +8,8 @@
 		{ "type": "vcs", "url": "git@github.com:getstackhead/deployment.git" }
 	],
 	"require": {
-		"getstackhead/deployment": "dev-master",
-		"getstackhead/project-validator": "^1.0"
+		"getstackhead/deployment": "dev-feature/system_user",
+		"getstackhead/project-validator": "dev-feature/system_user"
 	},
 	"scripts":{
 		"stackhead-submodules": [
