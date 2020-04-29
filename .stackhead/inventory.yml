@@ -8,6 +8,6 @@ all:
     myhost:
       ansible_host: 1.2.3.4 # add your own IP here!
       stackhead:
-        applications:
-          - example_docker_singlecontainer
+        applications: # select one of the applications below for deployment
+          #- example_docker_singlecontainer
           #- example_docker_multicontainer
