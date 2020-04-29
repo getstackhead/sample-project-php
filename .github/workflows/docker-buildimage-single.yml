@@ -1,0 +1,50 @@
+name: Build single-container image
+
+env:
+  IMAGE_NAME: project-demo-php
+  VERSION:    single-latest
+  DOCKERFILE: single-container.Dockerfile
+
+on:
+  push:
+  #  branches:
+  #    - master
+    paths: 
+      - Dockerfiles/single-container.Dockerfile
+      - .github/workflows/docker-buildimage-single.yml
+
+jobs:
+  push_github:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build image
+        run: docker build --tag image -f Dockerfiles/$DOCKERFILE .
+      - name: Push image to GitHub registry
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+          IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
+          
+          # Change all uppercase to lowercase
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+
+          docker tag image $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
+  push_dockerhub:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build image
+        run: docker build --tag image -f Dockerfiles/$DOCKERFILE .
+      - name: Push image to Docker registry
+        run: |
+          echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
+          IMAGE_ID=getstackhead/$IMAGE_NAME
+
+          # Change all uppercase to lowercase
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+
+          docker tag image $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
