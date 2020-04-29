@@ -22,11 +22,11 @@ This is a sample repository for deploying a PHP application and serving it on a 
     ```
 3. Change the IP address `1.2.3.4` to your own servers IP in `.stackhead/inventory.yml`
 
-4. Replace `mydomain.com` with your own domain in `.stackhead/project/example_docker.yaml`
+4. Replace `mydomain.com` with your own domain in `.stackhead/project/example_docker_multicontainer.yml`
 
 5. Validate your project file using the `getstackhead/project-validator` binary: 
    ```shell script
-   ./vendor/bin/project-validator .stackhead/project/example_docker.yml 
+   ./vendor/bin/project-validator .stackhead/project/example_docker_multicontainer.yml
    ```
 
 ### Server provisioning

@@ -10,7 +10,10 @@ deployment:
       - name: data
         image: getstackhead/project-demo-php:data-latest
       - name: nginx
-        image: saitho/nginx:www
+        image: getstackhead/nginx:php
+        environment:
+          DOCKER_PROXY_SERVICE_NAME: php
+          NGINX_PUBLIC_DIRECTORY: html
         links:
           - php
         volumes_from:

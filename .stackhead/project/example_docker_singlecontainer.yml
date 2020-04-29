@@ -8,8 +8,7 @@ deployment:
       port: 8080
     services:
       - name: app
-        image: getstackhead/project-demo-php:single
-        user: 1000:1000
+        image: getstackhead/project-demo-php:single-latest
         links:
           - db
       - name: db
