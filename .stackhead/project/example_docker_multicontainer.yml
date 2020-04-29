@@ -11,16 +11,12 @@ deployment:
         image: getstackhead/project-demo-php:data-latest
       - name: nginx
         image: getstackhead/nginx:php
-        environment:
-          DOCKER_PROXY_SERVICE_NAME: php
-          NGINX_PUBLIC_DIRECTORY: html
         links:
           - php
         volumes_from:
           - data:ro
       - name: php
         image: getstackhead/php:7.4
-        user: "${STACKHEAD_USER}"
         links:
           - db
         volumes_from:
