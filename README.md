@@ -34,28 +34,28 @@ The provisioning and deployment part is the same regardless of the example you w
 
 1. Adjust your inventory configuration in `.stackhead/inventory.yml`
    1. Change the IP address in `ansible_host` to your own servers IP in `.stackhead/inventory.yml`
-   2. Uncomment the line "- example_docker_singlecontainer" in `applications` section
+   2. Uncomment the line "- example_container_single" in `applications` section
 
-2. Adjust the project settings in `.stackhead/project/example_docker_singlecontainer.yml`
+2. Adjust the project settings in `.stackhead/project/example_container_single.yml`
    1. Set your own domain in `domain`
 
 3. Validate your project file using the `project-validator` binary: 
    ```shell script
-   ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_docker_singlecontainer.yml
+   ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_container_single.yml
    ```
 
 #### Multi container application
 
 1. Adjust your inventory configuration in `.stackhead/inventory.yml`
    1. Change the IP address in `ansible_host` to your own servers IP in `.stackhead/inventory.yml`
-   2. Uncomment the line "- example_docker_multicontainer" in `applications` section
+   2. Uncomment the line "- example_container_multi" in `applications` section
 
-2. Adjust the project settings in `.stackhead/project/example_docker_multicontainer.yml`
+2. Adjust the project settings in `.stackhead/project/example_container_multi.yml`
    1. Set your own domain in `domain`
 
 3. Validate your project file using the `project-validator` binary: 
    ```shell script
-   ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_docker_multicontainer.yml
+   ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_container_multi.yml
    ```
 
 ### Server provisioning

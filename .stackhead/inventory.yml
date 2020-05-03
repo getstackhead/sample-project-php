@@ -9,5 +9,5 @@ all:
       ansible_host: 1.2.3.4 # add your own IP here!
       stackhead:
         applications: # select one of the applications below for deployment
-          #- example_docker_singlecontainer
-          #- example_docker_multicontainer
+          #- example_container_single
+          #- example_container_multi
