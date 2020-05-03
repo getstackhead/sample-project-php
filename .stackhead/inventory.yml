@@ -11,3 +11,8 @@ all:
         applications: # select one of the applications below for deployment
           #- example_container_single
           #- example_container_multi
+          #- example_native
+        # for "example_native" application uncomment the capabilities section below and reprovision the server
+        #capabilities:
+        #  php:
+        #    version: 7.3

@@ -58,6 +58,21 @@ The provisioning and deployment part is the same regardless of the example you w
    ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_container_multi.yml
    ```
 
+#### Native application
+
+1. Adjust your inventory configuration in `.stackhead/inventory.yml`
+   1. Change the IP address in `ansible_host` to your own servers IP in `.stackhead/inventory.yml`
+   2. Uncomment the line "- example_native" in `applications` section
+   3. Uncomment the whole `capabilities` section below `applications`
+
+2. Adjust the project settings in `.stackhead/project/example_native.yml`
+   1. Set your own domain in `domain`
+
+3. Validate your project file using the `project-validator` binary: 
+   ```shell script
+   ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_native.yml
+   ```
+
 ### Server provisioning
 
 ```shell script
@@ -73,4 +88,7 @@ ansible-playbook vendor/getstackhead/stackhead/ansible/application-deploy.yml
 ```
 
 After deployment, open the domain in your web browser.
-You should see a page that prints "Hello world!" alongside the PHP version and successful database connection.
+
+If you deployed a container-typed project, you should see a page that prints "Hello world!" alongside the PHP version and successful database connection.
+
+If you deployed a native-typed project, you should see "This website was provisioned by StackHead." on the website.
