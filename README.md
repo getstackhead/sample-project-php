@@ -11,7 +11,7 @@ In order to try out this sample project, you'll need the following:
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 * a web server with root SSH access (we recommend renting a [pay-per-use VPS at Hetzner](https://www.hetzner.com/cloud))
 * a top level (sub) domain with A record pointing to your server IP
-* [Composer]() as this project requires StackHead deployment files that way
+* [Composer](https://getcomposer.org) as this project requires StackHead deployment files that way
 
 Also make sure to install StackHead via Composer:
 ```shell script
@@ -20,7 +20,7 @@ composer install
 
 and the required Ansible files via Ansible Galaxy:
 ```shell script
-ansible-galaxy install -r vendor/getstackhead/deployment/requirements/requirements.yml
+ansible-galaxy install -r vendor/getstackhead/stackhead/ansible/requirements/requirements.yml
 ```
 
 ## How to use
@@ -39,9 +39,9 @@ The provisioning and deployment part is the same regardless of the example you w
 2. Adjust the project settings in `.stackhead/project/example_docker_singlecontainer.yml`
    1. Set your own domain in `domain`
 
-3. Validate your project file using the `getstackhead/project-validator` binary: 
+3. Validate your project file using the `project-validator` binary: 
    ```shell script
-   ./vendor/bin/project-validator .stackhead/project/example_docker_singlecontainer.yml
+   ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_docker_singlecontainer.yml
    ```
 
 #### Multi container application
@@ -53,15 +53,15 @@ The provisioning and deployment part is the same regardless of the example you w
 2. Adjust the project settings in `.stackhead/project/example_docker_multicontainer.yml`
    1. Set your own domain in `domain`
 
-3. Validate your project file using the `getstackhead/project-validator` binary: 
+3. Validate your project file using the `project-validator` binary: 
    ```shell script
-   ./vendor/bin/project-validator .stackhead/project/example_docker_multicontainer.yml
+   ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_docker_multicontainer.yml
    ```
 
 ### Server provisioning
 
 ```shell script
-ansible-playbook vendor/getstackhead/deployment/server-provision.yml
+ansible-playbook vendor/getstackhead/stackhead/ansible/server-provision.yml
 ```
 
 After provisioning completed, you should see the Nginx default page when opening your domain in your browser.
@@ -69,7 +69,7 @@ After provisioning completed, you should see the Nginx default page when opening
 ### Application deployment
 
 ```shell script
-ansible-playbook vendor/getstackhead/deployment/application-deploy.yml
+ansible-playbook vendor/getstackhead/stackhead/ansible/application-deploy.yml
 ```
 
 After deployment, open the domain in your web browser.

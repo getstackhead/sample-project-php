@@ -4,22 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5cdf8ceba55c43855cafc4e6bb4256b",
+    "content-hash": "8b1abdc4e39826e70058a87e4aa62e1a",
     "packages": [
         {
-            "name": "getstackhead/deployment",
+            "name": "getstackhead/stackhead",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/getstackhead/deployment.git",
-                "reference": "6116c5b68322e4e8bc28a78dbc1a37b2c1af0831"
+                "url": "https://github.com/getstackhead/stackhead.git",
+                "reference": "cf209b280fb6d3773370c483621d7490489eb6cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getstackhead/deployment/zipball/6116c5b68322e4e8bc28a78dbc1a37b2c1af0831",
-                "reference": "6116c5b68322e4e8bc28a78dbc1a37b2c1af0831",
+                "url": "https://api.github.com/repos/getstackhead/stackhead/zipball/cf209b280fb6d3773370c483621d7490489eb6cb",
+                "reference": "cf209b280fb6d3773370c483621d7490489eb6cb",
                 "shasum": ""
             },
+            "bin": [
+                "validation/bin/project-validator"
+            ],
             "type": "library",
             "license": [
                 "GPL-2.0+"
@@ -32,52 +35,17 @@
             ],
             "description": "Setup your application on a domain automatically",
             "support": {
-                "source": "https://github.com/getstackhead/deployment/tree/master",
-                "issues": "https://github.com/getstackhead/deployment/issues"
+                "source": "https://github.com/getstackhead/stackhead/tree/master",
+                "issues": "https://github.com/getstackhead/stackhead/issues"
             },
-            "time": "2020-04-30T12:26:21+00:00"
-        },
-        {
-            "name": "getstackhead/project-validator",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/getstackhead/project-validator.git",
-                "reference": "cbfb6e309e978941caa85029b77bccc0ae0fbc3a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/getstackhead/project-validator/zipball/cbfb6e309e978941caa85029b77bccc0ae0fbc3a",
-                "reference": "cbfb6e309e978941caa85029b77bccc0ae0fbc3a",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/project-validator"
-            ],
-            "type": "library",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Mario Lubenka",
-                    "email": "mario.lubenka@googlemail.com"
-                }
-            ],
-            "description": "Validate your StackHead project definition files",
-            "support": {
-                "source": "https://github.com/getstackhead/project-validator/tree/master",
-                "issues": "https://github.com/getstackhead/project-validator/issues"
-            },
-            "time": "2020-04-30T12:26:03+00:00"
+            "time": "2020-05-03T16:19:45+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "getstackhead/deployment": 20,
-        "getstackhead/project-validator": 20
+        "getstackhead/stackhead": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
