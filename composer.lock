@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "517d310975c43d9e630b4498ebe9e38a",
+    "content-hash": "8b1abdc4e39826e70058a87e4aa62e1a",
     "packages": [
         {
             "name": "getstackhead/stackhead",
-            "version": "dev-rename-types",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getstackhead/stackhead.git",
-                "reference": "89ab6b628dcdbec29c21dfb484a3b5dd5887b930"
+                "reference": "a5a0ab47ef83563754365dd8aba7924b6ce1b954"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getstackhead/stackhead/zipball/89ab6b628dcdbec29c21dfb484a3b5dd5887b930",
-                "reference": "89ab6b628dcdbec29c21dfb484a3b5dd5887b930",
+                "url": "https://api.github.com/repos/getstackhead/stackhead/zipball/a5a0ab47ef83563754365dd8aba7924b6ce1b954",
+                "reference": "a5a0ab47ef83563754365dd8aba7924b6ce1b954",
                 "shasum": ""
             },
             "bin": [
@@ -35,10 +35,10 @@
             ],
             "description": "Setup your application on a domain automatically",
             "support": {
-                "source": "https://github.com/getstackhead/stackhead/tree/rename-types",
+                "source": "https://github.com/getstackhead/stackhead/tree/master",
                 "issues": "https://github.com/getstackhead/stackhead/issues"
             },
-            "time": "2020-05-03T17:59:51+00:00"
+            "time": "2020-05-24T17:35:29+00:00"
         }
     ],
     "packages-dev": [],
