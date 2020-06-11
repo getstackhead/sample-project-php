@@ -4,24 +4,33 @@ deployment:
   type: container
   settings:
     expose:
-      service: nginx
-      port: 80
+      - service: nginx
+        internal_port: 80
+        external_port: 80
+      - service: pma
+        internal_port: 80
+        external_port: 81
     services:
       - name: data
         image: getstackhead/project-demo-php:data-latest
       - name: nginx
         image: getstackhead/nginx:php
-        links:
-          - php
         volumes_from:
           - data:ro
       - name: php
         image: getstackhead/php:7.4
-        links:
-          - db
         volumes_from:
           - data
       - name: db
         image: mariadb:10.5
         environment:
           MYSQL_ROOT_PASSWORD: example
+      - name: pma
+        image: phpmyadmin/phpmyadmin:latest
+        environment:
+          PMA_ARBITRARY: 1
+          MYSQL_ROOT_PASSWORD: example
+        volumes:
+          - type: local
+            src: sessions
+            dest: /sessions

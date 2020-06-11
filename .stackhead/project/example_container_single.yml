@@ -9,8 +9,6 @@ deployment:
     services:
       - name: app
         image: getstackhead/project-demo-php:single-latest
-        links:
-          - db
       - name: db
         image: mariadb:10.5
         environment:

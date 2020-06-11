@@ -90,5 +90,15 @@ ansible-playbook vendor/getstackhead/stackhead/ansible/application-deploy.yml
 After deployment, open the domain in your web browser.
 
 If you deployed a container-typed project, you should see a page that prints "Hello world!" alongside the PHP version and successful database connection.
+If you deployed the `example_container_multi` project you can access PhpMyAdmin on port 81 (no HTTPS).
 
 If you deployed a native-typed project, you should see "This website was provisioned by StackHead." on the website.
+
+### Remove application
+
+If you want to remove your application, run the following playbook.
+Make sure to replace `PROJECTNAME` with the name of the project you set up (i.e. example_native, example_container_multi or example_container_single).
+
+```shell script
+ansible-playbook vendor/getstackhead/stackhead/ansible/application-destroy.yml --extra-vars "project_name=PROJECTNAME"
+```

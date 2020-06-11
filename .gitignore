@@ -5,3 +5,4 @@ vendor
 # avoid committing customized files
 # if there are really changes to be committed, use --force
 .stackhead/*
+terraform.tfstate*

@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/getstackhead/stackhead.git",
-                "reference": "a5a0ab47ef83563754365dd8aba7924b6ce1b954"
+                "reference": "215e0262c55eb5fe29e3be9d4ec03cfd7883d0d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getstackhead/stackhead/zipball/a5a0ab47ef83563754365dd8aba7924b6ce1b954",
-                "reference": "a5a0ab47ef83563754365dd8aba7924b6ce1b954",
+                "url": "https://api.github.com/repos/getstackhead/stackhead/zipball/215e0262c55eb5fe29e3be9d4ec03cfd7883d0d0",
+                "reference": "215e0262c55eb5fe29e3be9d4ec03cfd7883d0d0",
                 "shasum": ""
             },
             "bin": [
@@ -38,7 +38,7 @@
                 "source": "https://github.com/getstackhead/stackhead/tree/master",
                 "issues": "https://github.com/getstackhead/stackhead/issues"
             },
-            "time": "2020-05-24T17:35:29+00:00"
+            "time": "2020-06-12T12:09:49+00:00"
         }
     ],
     "packages-dev": [],
