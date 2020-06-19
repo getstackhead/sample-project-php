@@ -1,15 +1,15 @@
 ---
-domain: mydomain.com
-deployment:
-  type: container
-  settings:
+type: container
+domains:
+  - domain: mydomain.com
     expose:
       service: app
       port: 8080
-    services:
-      - name: app
-        image: getstackhead/project-demo-php:single-latest
-      - name: db
-        image: mariadb:10.5
-        environment:
-          MYSQL_ROOT_PASSWORD: example
+container:
+  services:
+    - name: app
+      image: getstackhead/project-demo-php:single-latest
+    - name: db
+      image: mariadb:10.5
+      environment:
+        MYSQL_ROOT_PASSWORD: example
