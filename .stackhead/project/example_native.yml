@@ -1,9 +1,9 @@
 ---
-domain: mydomain.com
-deployment:
-  type: native
-  settings:
+type: native
+domains:
+  - domain: mydomain.com
     public_path: html
-    capabilities:
-      php:
-        version: 7.3
+native:
+  capabilities:
+    php:
+      version: 7.3
