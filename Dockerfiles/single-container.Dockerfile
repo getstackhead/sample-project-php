@@ -1,4 +1,4 @@
-FROM trafex/alpine-nginx-php7
+FROM trafex/alpine-nginx-php7:1.8.0
 
 COPY src /var/www
 

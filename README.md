@@ -39,7 +39,7 @@ The provisioning and deployment part is the same regardless of the example you w
 2. Adjust the project settings in `.stackhead/project/example_container_single.yml`
    1. Set your own domain in `domain`
 
-3. Validate your project file using the `project-validator` binary: 
+3. Validate your project file using the `project-validator` binary:
    ```shell script
    ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_container_single.yml
    ```
@@ -53,7 +53,7 @@ The provisioning and deployment part is the same regardless of the example you w
 2. Adjust the project settings in `.stackhead/project/example_container_multi.yml`
    1. Set your own domain in `domain`
 
-3. Validate your project file using the `project-validator` binary: 
+3. Validate your project file using the `project-validator` binary:
    ```shell script
    ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_container_multi.yml
    ```
@@ -68,7 +68,7 @@ The provisioning and deployment part is the same regardless of the example you w
 2. Adjust the project settings in `.stackhead/project/example_native.yml`
    1. Set your own domain in `domain`
 
-3. Validate your project file using the `project-validator` binary: 
+3. Validate your project file using the `project-validator` binary:
    ```shell script
    ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_native.yml
    ```
