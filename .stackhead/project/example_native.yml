@@ -1,9 +1,0 @@
----
-type: native
-domains:
-  - domain: mydomain.com
-    public_path: html
-native:
-  capabilities:
-    php:
-      version: 7.3

@@ -9,7 +9,7 @@ It provides examples for deploying a single and multi container applications.
 In order to try out this sample project, you'll need the following:
 
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-* a web server with root SSH access (we recommend renting a [pay-per-use VPS at Hetzner](https://www.hetzner.com/cloud))
+* a web server with root SSH access (we recommend renting a [pay-per-use VPS at Hetzner. Get 20€ cloud balance for free](https://hetzner.cloud/?ref=n7H3qhWcZ2QS))
 * a top level (sub) domain with A record pointing to your server IP
 * [Composer](https://getcomposer.org) as this project requires StackHead deployment files that way
 
@@ -58,21 +58,6 @@ The provisioning and deployment part is the same regardless of the example you w
    ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_container_multi.yml
    ```
 
-#### Native application
-
-1. Adjust your inventory configuration in `.stackhead/inventory.yml`
-   1. Change the IP address in `ansible_host` to your own servers IP in `.stackhead/inventory.yml`
-   2. Uncomment the line "- example_native" in `applications` section
-   3. Uncomment the whole `capabilities` section below `applications`
-
-2. Adjust the project settings in `.stackhead/project/example_native.yml`
-   1. Set your own domain in `domain`
-
-3. Validate your project file using the `project-validator` binary:
-   ```shell script
-   ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_native.yml
-   ```
-
 ### Server provisioning
 
 ```shell script
@@ -92,12 +77,10 @@ After deployment, open the domain in your web browser.
 If you deployed a container-typed project, you should see a page that prints "Hello world!" alongside the PHP version and successful database connection.
 If you deployed the `example_container_multi` project you can access PhpMyAdmin on port 81 (no HTTPS).
 
-If you deployed a native-typed project, you should see "This website was provisioned by StackHead." on the website.
-
 ### Remove application
 
 If you want to remove your application, run the following playbook.
-Make sure to replace `PROJECTNAME` with the name of the project you set up (i.e. example_native, example_container_multi or example_container_single).
+Make sure to replace `PROJECTNAME` with the name of the project you set up (i.e. example_container_multi or example_container_single).
 
 ```shell script
 ansible-playbook vendor/getstackhead/stackhead/ansible/application-destroy.yml --extra-vars "project_name=PROJECTNAME"
