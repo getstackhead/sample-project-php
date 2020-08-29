@@ -11,16 +11,15 @@ In order to try out this sample project, you'll need the following:
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 * a web server with root SSH access (we recommend renting a [pay-per-use VPS at Hetzner. Get 20€ cloud balance for free](https://hetzner.cloud/?ref=n7H3qhWcZ2QS))
 * a top level (sub) domain with A record pointing to your server IP
-* [Composer](https://getcomposer.org) as this project requires StackHead deployment files that way
 
-Also make sure to install StackHead via Composer:
+Also make sure to install StackHead via Ansible:
 ```shell script
-composer install
+ansible-galaxy collection install git+https://github.com/getstackhead/stackhead.git
 ```
 
 and the required Ansible files via Ansible Galaxy:
 ```shell script
-ansible-galaxy install -r vendor/getstackhead/stackhead/ansible/requirements/requirements.yml
+ansible-galaxy install -r  ~/.ansible/collections/ansible_collections/getstackhead/stackhead/requirements/requirements.yml
 ```
 
 ## How to use
@@ -39,7 +38,7 @@ The provisioning and deployment part is the same regardless of the example you w
 2. Adjust the project settings in `.stackhead/project/example_container_single.yml`
    1. Set your own domain in `domain`
 
-3. Validate your project file using the `project-validator` binary:
+3. Does not work currently ~~Validate your project file using the `project-validator` binary:~~
    ```shell script
    ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_container_single.yml
    ```
@@ -53,7 +52,7 @@ The provisioning and deployment part is the same regardless of the example you w
 2. Adjust the project settings in `.stackhead/project/example_container_multi.yml`
    1. Set your own domain in `domain`
 
-3. Validate your project file using the `project-validator` binary:
+3. Does not work currently ~~Validate your project file using the `project-validator` binary:~~
    ```shell script
    ./vendor/getstackhead/stackhead/validation/bin/project-validator .stackhead/project/example_container_multi.yml
    ```
@@ -61,7 +60,7 @@ The provisioning and deployment part is the same regardless of the example you w
 ### Server provisioning
 
 ```shell script
-ansible-playbook vendor/getstackhead/stackhead/ansible/server-provision.yml
+ansible-playbook  ~/.ansible/collections/ansible_collections/getstackhead/stackhead/playbooks/server-provision.yml
 ```
 
 After provisioning completed, you should see the Nginx default page when opening your domain in your browser.
@@ -69,7 +68,7 @@ After provisioning completed, you should see the Nginx default page when opening
 ### Application deployment
 
 ```shell script
-ansible-playbook vendor/getstackhead/stackhead/ansible/application-deploy.yml
+ansible-playbook ~/.ansible/collections/ansible_collections/getstackhead/stackhead/playbooks/application-deploy.yml
 ```
 
 After deployment, open the domain in your web browser.
@@ -83,5 +82,5 @@ If you want to remove your application, run the following playbook.
 Make sure to replace `PROJECTNAME` with the name of the project you set up (i.e. example_container_multi or example_container_single).
 
 ```shell script
-ansible-playbook vendor/getstackhead/stackhead/ansible/application-destroy.yml --extra-vars "project_name=PROJECTNAME"
+ansible-playbook ~/.ansible/collections/ansible_collections/getstackhead/stackhead/playbooks/application-destroy.yml --extra-vars "project_name=PROJECTNAME"
 ```
