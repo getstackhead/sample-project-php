@@ -2,8 +2,9 @@
 domains:
   - domain: mydomain.com
     expose:
-      service: app
-      port: 8080
+      - service: app
+        internal_port: 8080
+        external_port: 80
 container:
   services:
     - name: app

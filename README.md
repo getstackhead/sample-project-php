@@ -8,8 +8,8 @@ It provides examples for deploying a single and multi container applications.
 
 In order to try out this sample project, you'll need the following:
 
-* [StackHead CLI binary file](https://docs.stackhead.io/v/next/introduction/installation)
-* [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+* [StackHead CLI binary file](https://github.com/getstackhead/stackhead-cli/releases)
+* [Ansible 2.10 or later](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 * a web server with root SSH access (we recommend renting a [pay-per-use VPS at Hetzner. Get 20€ cloud balance for free](https://hetzner.cloud/?ref=n7H3qhWcZ2QS))
 * a top level (sub) domain with A record pointing to your server IP
 
@@ -25,7 +25,7 @@ stackhead-cli init
 ### Server provisioning
 
 ```bash
-stackhead-cli setup [IP_ADDRESS]
+stackhead-cli setup 159.69.20.148
 ```
 
 After provisioning completed, you should see the Nginx default page when opening your domain in your browser.
@@ -37,17 +37,17 @@ There are two differently sized projects, consisting of one single container and
 
 #### Single container application
 
-1. Adjust the project settings in `.stackhead/project/example_container_single.yml`
+1. Adjust the project settings in `.stackhead/project/single-container.stackhead.yml`
    1. Set your own domain in `domain`
 
 2. Validate your project file using the `validate` command:
-   ```bash
-   stackhead-cli validate .stackhead/project/example_container_single.yml
+   ```shell script
+   stackhead-cli project validate ./.stackhead/project/single-container.stackhead.yml
    ```
 
-3. Deploy the application. Make sure to replace `[IP_ADDRESS]` with your servers IP address.
-    ```bash
-    stackhead-cli deploy ./.stackhead/example_container_single.yml [IP_ADDRESS]
+3. Deploy the application. Make sure to replace `159.69.20.148` with your servers IP address.
+    ```shell script
+    stackhead-cli project deploy ./.stackhead/project/single-container.stackhead.yml 159.69.20.148
     ```
 
 4. After deployment, open the domain in your web browser. You should see a page that prints "Hello world!" alongside the PHP version and successful database connection.
@@ -55,22 +55,22 @@ There are two differently sized projects, consisting of one single container and
 5. Remove the application:
 
 ```shell script
-stackhead-cli destroy example_container_single
+stackhead-cli project destroy ./.stackhead/project/single-container.stackhead.yml
 ```
 
 #### Multi container application
 
-1. Adjust the project settings in `.stackhead/project/example_container_multi.yml`
+1. Adjust the project settings in `.stackhead/project/multi-container.stackhead.yml`
    1. Set your own domain in `domain`
 
 3. Validate your project file using the `validate` command:
-   ```bash
-   stackhead-cli validate .stackhead/project/example_container_multi.yml
+   ```shell script
+   stackhead-cli project validate ./.stackhead/project/multi-container.stackhead.yml
    ```
 
-3. Deploy the application. Make sure to replace `[IP_ADDRESS]` with your servers IP address.
-    ```bash
-    stackhead-cli deploy ./.stackhead/project/example_container_multi.yml [IP_ADDRESS]
+3. Deploy the application. Make sure to replace `159.69.20.148` with your servers IP address.
+    ```shell script
+    stackhead-cli project deploy ./.stackhead/project/multi-container.stackhead.yml 159.69.20.148
     ```
 
 4. After deployment, open the domain in your web browser.
@@ -81,5 +81,5 @@ You should see a page that prints "Hello world!" alongside the PHP version and s
 5. Remove the application:
 
 ```shell script
-stackhead-cli destroy example_container_multi
+stackhead-cli project destroy ./.stackhead/project/multi-container.stackhead.yml
 ```

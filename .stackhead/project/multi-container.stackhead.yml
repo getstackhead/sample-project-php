@@ -1,6 +1,6 @@
 ---
 domains:
-  - domain: mydomain.com
+  - domain: test.otakuloot.de
     expose:
       - service: nginx
         internal_port: 80
